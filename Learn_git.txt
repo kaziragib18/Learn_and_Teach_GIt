@@ -1,1 +1,38 @@
-Learn How to handle git.
+Learn How to handle git and github.
+
+Difference bwtween git and github,
+
+Git: A version control system for tracking changes in files, code and managing project history. It works locally on your machine. For example that I showed,
+
+git init, git add . , git commit -m "Your commit massage"
+
+GitHub: A platform that hosts Git repositories online, allowing for collaboration, code sharing, and project management. For example that I showed,
+
+git remote add origin https://github.com/Kaziragib18/Lean_and_Teach_Git.git
+git push -u origin master
+
+You add the GitHub repository as a remote and push your local commits to it.
+
+
+The git checkout -b command is used to create a new branch and immediately switch to it in Git. Here's what it does:
+
+-b: This flag tells Git to create a new branch.
+
+<branch-name>: The name you specify for the new branch. For example,
+git checkout -b feature-branch
+
+Important note, always make sure where you are creating branch from. If you create branch from main but you are on the feature-branch and create a new branch from there it will inharit the feature-branch code not main branch code.
+
+# You're on 'main'
+git checkout -b new-branch
+
+If you're on a feature branch and create a new branch, it will inherit the state of the feature branch.
+
+# You're on 'feature-branch'
+git checkout -b new-feature-branch
+
+Always be mindful of which branch you're on when creating a new branch.
+
+If you want to create a branch from a specific branch (like main), either check out main first or explicitly reference it when creating the new branch. So use this to spacify the exact source branch,
+
+git checkout -b <new-branch-name> <source-branch>
