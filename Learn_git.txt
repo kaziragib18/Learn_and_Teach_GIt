@@ -36,3 +36,17 @@ Always be mindful of which branch you're on when creating a new branch.
 If you want to create a branch from a specific branch (like main), either check out main first or explicitly reference it when creating the new branch. So use this to spacify the exact source branch,
 
 git checkout -b <new-branch-name> <source-branch>
+
+Next after changing to the feature-branch, we will push them in the github remote repository: git push -u origin feature-branch
+
+After that, we will be creating and Working with Pull Requests (PRs): basicall, pull requests (PRs) are a way to propose changes and collaborate with others on GitHub. Step as I showed so far,
+
+Step 1: git push -u origin feature-branch -- Push your feature branch to GitHub
+
+Step 2: Go to your GitHub repository, and you'll see an option to Create Pull Request.
+
+Step 3: Provide a title and description for the pull request, then click Create Pull Request.
+
+Step 4: Once the PR is reviewed and approved, it can be merged into the main or develop branch on GitHub.
+
+Step 5: After merging the pull request, you can delete the feature branch.
