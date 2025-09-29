@@ -3,3 +3,5 @@ Learn how checkout works!
 Lets learn about merge conflict in github.
 
 It change is coming from "dev-kazi" branch
+
+Learn merge conflict in github
