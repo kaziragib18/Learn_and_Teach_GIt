@@ -52,6 +52,37 @@ Step 4: Once the PR is reviewed and approved, it can be merged into the main or 
 Step 5: After merging the pull request, you can delete the feature branch.
 
 
+Learn merge conflict in github
+
+How git reset works -
+It isused to undo changes in your Git history or your working directory. Think of it as a "go back to a previous state" button.
+
+For this is a  line test-1 - code that we will add . in the github (stageing not pushed)
+
+This is a line test-2 - code that we will add. in github (stageing not pushed)
+
+let say bad code - line test-3 - will break the production. This code that we will add. in github (stageing not pushed)
+
+As we see from the git log using git reset hash of the commit, we can remove the commit that we added from the git. Use git status to check the modified file and you will see the green line as they are now unstage from the github.
+
+Say you pushed a commit to GitHub that you now want to remove from GitHub,bBut you want to keep the code locally. to do this 
+git reset --soft HEAD~1
+what it does it go back one commit, but keep the code (soft reset). This removes the latest commit. Your code will stay in the staging area. Nothing is lost.
+then use, git push origin main --force
+why force?  Git requires --force because you're changing the commit history, and Git wants to protect your remote (GitHub) from accidental data loss.
+
+if we do this, git push origin main
+Git will says: ❌ "You can't do that — your history doesn't match."
+
+so you this, git push origin main --force
+This tells Git: ✅ "Yes, I know. Overwrite GitHub’s history with my local one."
+
+Safer alternative: --force-with-lease
+If you're working with others, this is better:
+git push origin main --force-with-lease
+
+It checks that no one else has pushed in the meantime. If someone did, it stops to prevent accidental overwrites.
+
 Git conflict ----------------
 So here is the review note on what we did so far
 
